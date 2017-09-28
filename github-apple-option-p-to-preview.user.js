@@ -10,22 +10,28 @@
 var KEY_CODE_P = 80;
 
 
-var comment_textareas = document.querySelectorAll('textarea.js-comment-field');
+document.body.addEventListener(
+	'keydown',
+	function(e) {
+		var node = e.target;
 
-for (var i = 0; i < comment_textareas.length; i++) {
-	comment_textareas[i].onkeydown = function(e) {
+		if (node.type !== 'textarea' ||
+			node.className.indexOf('js-comment-field') === -1) {
+			return;
+		}
+
 		if (e.metaKey && e.altKey && e.keyCode == KEY_CODE_P) {
-			show_preview_pane(this);
+			show_preview_pane(node);
 
-			var write_tab = this
+			var write_tab = node
 				.closest('.js-previewable-comment-form')
 				.querySelector('.js-write-tab');
 			window.setTimeout(function() {
 				register_pane_toggle_shortcut(write_tab);
 			});
 		}
-	};
-}
+	}
+);
 
 
 function show_preview_pane (node) {

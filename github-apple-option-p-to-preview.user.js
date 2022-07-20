@@ -23,7 +23,7 @@
 var KEY_CODE_P = 80;
 
 
-document.body.addEventListener(
+document.documentElement.addEventListener(
 	'keydown',
 	function(e) {
 		var node = e.target;

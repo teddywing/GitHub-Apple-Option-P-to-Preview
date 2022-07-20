@@ -2,7 +2,7 @@
 // @name        GitHub Apple-Option-P to Preview
 // @namespace   com.teddywing
 // @description Enables Apple-Option-P to toggle the Preview pane
-// @version     0.0.1
+// @version     0.0.2
 // @match       https://*.github.com/*
 // @grant       none
 // ==/UserScript==

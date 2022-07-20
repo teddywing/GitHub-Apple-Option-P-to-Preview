@@ -1,0 +1,13 @@
+CHANGELOG
+=========
+
+v0.0.2 (2022-07-20):
+	Fixes:
+
+	* Fix bug where shortcut would stop working after Turbolinks navigation
+	  after a recent GitHub update.
+
+v0.0.1 (2017-09-29):
+	First release.
+
+ vim:tw=80:comments=:fo+=n:formatlistpat=^\\s*\\*\\s*
